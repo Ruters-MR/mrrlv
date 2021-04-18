@@ -11,7 +11,7 @@ body {
 }
 
 input[type=text], input[type=password] {
-    width: 25%;
+    width: 200px;
     padding: 8px 20px;
     display: block;
     border: none;
@@ -19,7 +19,13 @@ input[type=text], input[type=password] {
     margin-right: auto;
     border-radius: 15px;
     box-shadow: 0px 0px 6px 1px darkorchid;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: ease-out 0.4s;
+}
+
+input:hover {
+    transition: ease-in 0.2s;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 label {
@@ -37,15 +43,13 @@ button {
     font-weight: 550;
     padding: 7px 7px;
     cursor: pointer;
-    width: 25%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 7px;
+    width: 190px;
+    margin: 25px auto 1px;
     display: block;
     border-radius: 20px;
-    box-shadow: 0px 0px 6px 1px rgba(100, 60, 190);
+    box-shadow: 0px 0px 6px 1px rgba(100, 60, 190, 1);
     border: none;
+    transition: ease-out 0.4s;
 }
 
 .divider{
@@ -55,35 +59,44 @@ button {
 }
 
 button:hover {
-    opacity: 0.8;
+    transition: ease-in 0.2s;
+    background-color: rgba(150, 60, 190, 0.7);
 }
 
 .cancelbtn {
     width: auto;
     border: none;
     padding: 5px 30px;
-    margin-top: 0;
+    margin-top: 8px;
     background-color: rgba(150, 60, 120, 0.6);
+    transition: ease-out 0.5s;
 }
 
 .imgcontainer {
     text-align: center;
-    margin: 24px 0 12px 0;
 }
 
-img.avatar {
-    width: 10%;
-    border-radius: 50%;
+img.avatar{
+    size: auto;
+    opacity: 70%;
+    transition: ease-out 3s;
+}
+
+img.avatar:hover {
+    transition: ease-in 0.5s;
+    filter: brightness(120%);
+    opacity: 1;
 }
 
 .container {
-    padding: 16px;
+    padding: 0px;
 }
 
 span.psw {
     float: right;
+    position: relative;
     font-weight: 500;
-    padding-top: 16px;
+    padding-top: 15px;
     margin-left:auto;
     margin-right:auto;
     color: #5a5a61;
@@ -92,8 +105,9 @@ span.psw {
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
     span.psw {
-        display: block;
-        float: none;
+        float: right;
+        position: relative;
+        display: inline-block;
     }
     .cancelbtn {
         width: 100%;
